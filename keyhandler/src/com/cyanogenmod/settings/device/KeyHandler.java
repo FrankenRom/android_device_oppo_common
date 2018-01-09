@@ -268,6 +268,7 @@ public class KeyHandler implements DeviceKeyHandler {
         }
     }
 
+    @Override
     public boolean handleKeyEvent(KeyEvent event) {
         int scanCode = event.getScanCode();
         boolean isKeySupported = ArrayUtils.contains(sSupportedGestures, scanCode);
@@ -356,6 +357,31 @@ public class KeyHandler implements DeviceKeyHandler {
             doHapticFeedback();
         }
         return true;
+    }
+
+    @Override
+    public boolean canHandleKeyEvent(KeyEvent event) {
+    	return false;
+    }
+
+    @Override
+    public boolean isCameraLaunchEvent(KeyEvent event) {
+    	return false;
+    }
+
+    @Override
+    public boolean isWakeEvent(KeyEvent event) {
+    	return false;
+    }
+
+    @Override
+    public boolean isDisabledKeyEvent(KeyEvent event) {
+    	return false;
+    }
+
+    @Override
+    public Intent isActivityLaunchEvent(KeyEvent event) {
+        return null;
     }
 
     private Message getMessageForKeyEvent(int scancode) {
