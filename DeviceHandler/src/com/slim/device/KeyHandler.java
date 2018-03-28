@@ -39,6 +39,7 @@ import android.view.KeyEvent;
 import android.service.notification.ZenModeConfig;
 
 import com.slim.device.settings.ScreenOffGesture;
+import com.slim.device.settings.SliderSettings;
 
 import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
